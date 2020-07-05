@@ -525,6 +525,9 @@ ein_in01,38,29,0	script	Paul Spanner	63,{
 izlude,147,137,3	script	Refinery	10276,{
 	callfunc "refinemain","Hollgrehenn",0;
 	end;
+OnInit:
+	waitingroom "�պǡ Item",0;
+	end;
 }
 morocc_in,73,38,6	script	Aragham	99,{
 	callfunc "refinemain","Aragham",0;

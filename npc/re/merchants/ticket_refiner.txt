@@ -177,6 +177,6 @@ izlude,152,137,3	script	Refine Master	10182,{
 	close;
 
 OnInit:
-	waitingroom "Ticket Refiner",0;
+	waitingroom "ตีบวกด้วย Ticket",0;
 	end;
 }
