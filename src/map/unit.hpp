@@ -59,8 +59,6 @@ struct unit_data {
 		unsigned blockedskill : 1;
 	} state;
 	char walk_done_event[EVENT_NAME_LENGTH];
-	char title[NAME_LENGTH];
-	int32 group_id;
 };
 
 struct view_data {

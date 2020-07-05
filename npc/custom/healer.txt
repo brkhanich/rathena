@@ -1,46 +1,69 @@
-//===== rAthena Script =======================================
-//= Healer
-//===== By: ==================================================
-//= Euphy
-//===== Current Version: =====================================
-//= 1.1
-//===== Compatible With: =====================================
-//= rAthena Project
-//===== Description: =========================================
-//= Basic healer script.
-//===== Additional Comments: =================================
-//= 1.0 Initial script.
-//= 1.1 Aligned coordinates with @go.
-//============================================================
-
-
-//= Translated & Modified by Start (Discord ID: Start#1356)
-
-
 -	script	Healer	-1,{
 
-	.@Price = 0;	// o ค่าใช้จ่ายต่อครั้ง (0: ฟรี)
-	.@Buffs = 1;	// o ให้ Buff หรือไม่? (1: ให้ / 0: ไม่ให้)
-	.@Repair = 1;	// o ซ่อมของทั้งตัว หรือไม่? (1: ให้ / 0: ไม่ให้)
-	.@Identify = 1;	// o ส่องของทั้งตัว หรือไม่? (1: ให้ / 0: ไม่ให้)
-	.@Delay = 0;	// o หลังจาก Heal แล้วต้องรอกี่วินาทีถึงจะกดได้อีกที (0: ไม่ต้องรอ)
+	.@Price = 0;	// o ยครจร’รฃยชรฉยจรจร’รยตรจรยครร‘รฉยง (0: ยฟรร•)
+	.@Buffs = 1;	// o รฃรรฉ Buff รรร—รรครรจ? (1: รฃรรฉ / 0: รครรจรฃรรฉ)
+	.@Repair = 1;	// o ยซรจรรยขรยงยทร‘รฉยงยตร‘ร รรร—รรครรจ? (1: รฃรรฉ / 0: รครรจรฃรรฉ)
+	.@Identify = 1;	// o รรจรยงยขรยงยทร‘รฉยงยตร‘ร รรร—รรครรจ? (1: รฃรรฉ / 0: รครรจรฃรรฉ)
+	.@Delay = 0;	// o รร…ร‘ยงยจร’ยก Heal รกร…รฉรยตรฉรยงรรยกร•รจรร”ยนร’ยทร•ยถร–ยงยจรยกยดรคยดรฉรร•ยกยทร• (0: รครรจยตรฉรยงรร)
 
 	if (@HD > gettimetick(2))
 	end;
 	if (.@Price) {
-		message strcharinfo(0), "ค่าใช้จ่าย " + callfunc("F_InsertComma",.@Price) + " Zeny";
+		message strcharinfo(0), "ยครจร’รฃยชรฉยจรจร’ร " + callfunc("F_InsertComma",.@Price) + " Zeny";
 		if (Zeny < .@Price)
 		end;
-		if (select("^0055FFHeal^000000:^777777ยกเลิก^000000") == 2)
+		if (select("^0055FFHeal^000000:^777777รยกร ร…ร”ยก^000000") == 2)
 		end;
 		Zeny -= .@Price;
 	}
 	specialeffect2 EF_HEAL2;
 	if (.@Buffs) {
 		specialeffect2 EF_INCAGILITY;
-		sc_start SC_INCREASEAGI,240000,10;
+		sc_start SC_INCREASEAGI,720000,10;
 		specialeffect2 EF_BLESSING;
-		sc_start SC_BLESSING,240000,10;
+		sc_start SC_BLESSING,720000,10;
+		sc_start SC_ASSUMPTIO,720000,10;
+		sc_start SC_ENDURE,720000,10;
+		sc_start SC_ANGELUS,720000,10;
+		sc_start SC_MAGNIFICAT,720000,10;
+		sc_start SC_GLORIA,720000,10;
+		sc_start SC_ADRENALINE2,720000,10;
+		sc_start SC_IMPOSITIO,720000,10;
+		sc_start SC_SUFFRAGIUM,720000,10;
+		sc_start SC_KYRIE,720000,10;
+		sc_start SC_STRFood,720000,10;
+		sc_start SC_AGIFood,720000,10;
+		sc_start SC_VITFood,720000,10;
+		sc_start SC_INTFood,720000,10;
+		sc_start SC_DEXFood,720000,10;
+		sc_start SC_LUKFood,720000,10;
+		sc_end SC_STONE;
+		sc_end SC_FREEZE;
+		sc_end SC_STUN;
+		sc_end SC_SLEEP;
+		sc_end SC_POISON;
+		sc_end SC_CONFUSION;
+		sc_end SC_BLIND;
+		sc_end SC_BLOODING;
+		sc_end SC_DPOISON;
+		sc_end SC_FEAR;
+		sc_end SC_COLD;
+		sc_end SC_BURNING;
+		sc_end SC_DEEP_SLEEP;
+		sc_end SC_DEC_AGI;
+		sc_end SC_BROKENARMOR;
+		sc_end SC_BROKENWEAPON;
+		sc_end SC_NOEQUIPWEAPON;
+		sc_end SC_NOEQUIPSHIELD;
+		sc_end SC_NOEQUIPARMOR;
+		sc_end SC_NOEQUIPHELM;
+		sc_end SC__STRIPACCESSARY;
+		sc_end SC_PROPERTYUNDEAD;
+		sc_end SC_ORCISH;
+		sc_end SC_BERSERK;
+		sc_end SC_SKE;
+		sc_end SC_SWOO;
+		sc_end SC_SKA;
 	}
 	if(.@Repair)
 	repairall;
@@ -52,49 +75,49 @@
 	end;
 	
 OnInit:
-	waitingroom "ฟื้นฟูพลังชีวิต",0;
+	waitingroom "Heal and Buffs",0;
 	end;
 }
 
 
-// Duplicates
+// Duplicate
 //============================================================
-alberta,25,240,6	duplicate(Healer)	ฟื้นฟูพลังชีวิต#alb	10301
-aldebaran,135,118,6	duplicate(Healer)	ฟื้นฟูพลังชีวิต#alde	10301
-amatsu,200,79,4	duplicate(Healer)	ฟื้นฟูพลังชีวิต#ama	10301
-ayothaya,207,169,6	duplicate(Healer)	ฟื้นฟูพลังชีวิต#ayo	10301
-comodo,184,158,6	duplicate(Healer)	ฟื้นฟูพลังชีวิต#com	10301
-einbech,57,36,6	duplicate(Healer)	ฟื้นฟูพลังชีวิต#einbe	10301
-einbroch,57,202,6	duplicate(Healer)	ฟื้นฟูพลังชีวิต#einbr	10301
-geffen,115,72,6	duplicate(Healer)	ฟื้นฟูพลังชีวิต#gef	10301
-gonryun,156,122,6	duplicate(Healer)	ฟื้นฟูพลังชีวิต#gon	10301
-hugel,89,150,6	duplicate(Healer)	ฟื้นฟูพลังชีวิต#hug	10301
-izlude,121,150,6	duplicate(Healer)	ฟื้นฟูพลังชีวิต#izl	10301	//Pre-RE: (125,118)
-jawaii,250,139,4	duplicate(Healer)	ฟื้นฟูพลังชีวิต#jaw	10301
-lighthalzen,152,100,6	duplicate(Healer)	ฟื้นฟูพลังชีวิต#lhz	10301
-louyang,226,103,4	duplicate(Healer)	ฟื้นฟูพลังชีวิต#lou	10301
-manuk,272,144,6	duplicate(Healer)	ฟื้นฟูพลังชีวิต#man	10301
-mid_camp,203,289,6	duplicate(Healer)	ฟื้นฟูพลังชีวิต#mid	10301
-moc_ruins,72,164,4	duplicate(Healer)	ฟื้นฟูพลังชีวิต#moc	10301
-morocc,153,97,6	duplicate(Healer)	ฟื้นฟูพลังชีวิต#mor	10301
-moscovia,220,191,4	duplicate(Healer)	ฟื้นฟูพลังชีวิต#mos	10301
-niflheim,212,182,5	duplicate(Healer)	ฟื้นฟูพลังชีวิต#nif	10301
-payon,179,106,4	duplicate(Healer)	ฟื้นฟูพลังชีวิต#pay	10301
-prontera,163,193,4	duplicate(Healer)	ฟื้นฟูพลังชีวิต#prt	10301
-rachel,125,116,6	duplicate(Healer)	ฟื้นฟูพลังชีวิต#rac	10301
-splendide,201,153,4	duplicate(Healer)	ฟื้นฟูพลังชีวิต#spl	10301
-thor_camp,249,74,4	duplicate(Healer)	ฟื้นฟูพลังชีวิต#thor	10301
-umbala,105,148,3	duplicate(Healer)	ฟื้นฟูพลังชีวิต#umb	10301
-veins,217,121,4	duplicate(Healer)	ฟื้นฟูพลังชีวิต#ve	10301
-xmas,143,136,4	duplicate(Healer)	ฟื้นฟูพลังชีวิต#xmas	10301
-yuno,164,45,4	duplicate(Healer)	ฟื้นฟูพลังชีวิต#yuno	10301
+
+alberta,25,240,6	duplicate(Healer)	Healer#alb	10110
+aldebaran,135,118,6	duplicate(Healer)	Healer#alde	10110
+amatsu,204,112,3	duplicate(Healer)	Healer#ama	10110
+ayothaya,144,117,5	duplicate(Healer)	Healer#ayo	10110
+comodo,184,158,6	duplicate(Healer)	Healer#com	10110
+einbech,57,36,6	duplicate(Healer)	Healer#einbe	10110
+einbroch,57,202,6	duplicate(Healer)	Healer#einbr	10110
+geffen,115,72,6	duplicate(Healer)	Healer#gef	10110
+gonryun,156,122,6	duplicate(Healer)	Healer#gon	10110
+hugel,89,150,6	duplicate(Healer)	Healer#hug	10110
+izlude,121,150,6	duplicate(Healer)	Healer#izl	10110	//Pre-RE: (125,118)
+jawaii,250,139,4	duplicate(Healer)	Healer#jaw	10110
+lighthalzen,152,100,6	duplicate(Healer)	Healer#lhz	10110
+louyang,223,120,3	duplicate(Healer)	Healer#lou	10110
+manuk,272,144,6	duplicate(Healer)	Healer#man	10110
+mid_camp,203,289,6	duplicate(Healer)	Healer#mid	10110
+moc_ruins,72,164,4	duplicate(Healer)	Healer#moc	10110
+morocc,153,97,6	duplicate(Healer)	Healer#mor	10110
+moscovia,220,191,4	duplicate(Healer)	Healer#mos	10110
+niflheim,212,182,5	duplicate(Healer)	Healer#nif	10110
+payon,163,226,3	duplicate(Healer)	Healer#pay	10110
+prontera,162,193,4	duplicate(Healer)	Healer#prt	10110
+rachel,125,116,6	duplicate(Healer)	Healer#rac	10110
+splendide,201,153,4	duplicate(Healer)	Healer#spl	10110
+thor_camp,249,74,4	duplicate(Healer)	Healer#thor	10110
+umbala,105,148,3	duplicate(Healer)	Healer#umb	10110
+veins,217,121,4	duplicate(Healer)	Healer#ve	10110
+xmas,143,136,4	duplicate(Healer)	Healer#xmas	10110
+yuno,164,45,4	duplicate(Healer)	Healer#yuno	10110
 
 // Duplicates (Renewal)
 //============================================================
-brasilis,194,221,6	duplicate(Healer)	ฟื้นฟูพลังชีวิต#bra	10301
-dewata,195,187,4	duplicate(Healer)	ฟื้นฟูพลังชีวิต#dew	10301
-dicastes01,201,194,4	duplicate(Healer)	ฟื้นฟูพลังชีวิต#dic	10301
-ecl_in01,45,60,4	duplicate(Healer)	ฟื้นฟูพลังชีวิต#ecl	10301
-malangdo,132,114,6	duplicate(Healer)	ฟื้นฟูพลังชีวิต#mal	10301
-malaya,227,204,6	duplicate(Healer)	ฟื้นฟูพลังชีวิต#ma	10301
-mora,55,152,4	duplicate(Healer)	ฟื้นฟูพลังชีวิต#mora	10301
+brasilis,194,221,6	duplicate(Healer)	Healer#bra	10110
+dewata,195,187,4	duplicate(Healer)	Healer#dew	10110
+dicastes01,201,194,4	duplicate(Healer)	Healer#dic	10110
+ecl_in01,45,60,4	duplicate(Healer)	Healer#ecl	10110
+malangdo,132,114,6	duplicate(Healer)	Healer#mal	10110
+malaya,227,204,6	duplicate(Healer)	Healer#ma	10110

@@ -243,7 +243,7 @@ moc_ruins,68,164,3	duplicate(eto)	Eden Teleport Officer#2	729
 geffen,132,66,3	duplicate(eto)	Eden Teleport Officer#3	729
 alberta,124,67,3	duplicate(eto)	Eden Teleport Officer#4	729
 aldebaran,133,119,5	duplicate(eto)	Eden Teleport Officer#5	729
-izlude_in,68,162,1	duplicate(eto)	Eden Teleport Officer#6	729
+izlude_in,138,160,1	duplicate(eto)	Eden Teleport Officer#6	729
 prt_church,103,78,3	duplicate(eto)	Eden Teleport Officer#7	729
 geffen_in,160,104,5	duplicate(eto)	Eden Teleport Officer#8	729
 moc_prydb1,53,126,3	duplicate(eto)	Eden Teleport Officer#9	729
@@ -267,11 +267,11 @@ moscovia,209,197,5	duplicate(eto)	Eden Teleport Officer#26	729
 brasilis,191,224,3	duplicate(eto)	Eden Teleport Officer#27	729
 dewata,192,193,5	duplicate(eto)	Eden Teleport Officer#28	729
 morocc,161,97,5	duplicate(eto)	Eden Teleport Officer#29	729
-izlude,131,148,4	duplicate(eto)	Eden Teleport Officer#30	729
-izlude_a,131,148,4	duplicate(eto)	Eden Teleport Officer#30::eto_iz_a	729
-izlude_b,131,148,4	duplicate(eto)	Eden Teleport Officer#30::eto_iz_b	729
-izlude_c,131,148,4	duplicate(eto)	Eden Teleport Officer#30::eto_iz_c	729
-izlude_d,131,148,4	duplicate(eto)	Eden Teleport Officer#30::eto_iz_d	729
+izlude,138,160,4	duplicate(eto)	Eden Teleport Officer#30	729
+izlude_a,138,160,4	duplicate(eto)	Eden Teleport Officer#30::eto_iz_a	729
+izlude_b,138,160,4	duplicate(eto)	Eden Teleport Officer#30::eto_iz_b	729
+izlude_c,138,160,4	duplicate(eto)	Eden Teleport Officer#30::eto_iz_c	729
+izlude_d,138,160,4	duplicate(eto)	Eden Teleport Officer#30::eto_iz_d	729
 umbala,105,158,3	duplicate(eto)	Eden Teleport Officer#31	729
 malaya,225,218,1	duplicate(eto)	Eden Teleport Officer#32	729
 verus04,116,243,0	duplicate(eto)	Eden Teleport Officer#33	729

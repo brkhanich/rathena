@@ -1301,7 +1301,7 @@ izlude,120,207,4	script	Information Staff#0	8W_SOLDIER,{
 					case 4:
 						mes "[Information Staff]";
 						mes "If you want to visit ^8B4513Jawaii^000000 - the resort place for a couple,";
-						mes "talk to the <NAVI>[Wedding Secretary]<INFO>izlude,180,224,</INFO></NAVI>.";
+						mes "talk to the <NAVI>[Wedding Secretary]<INFO>izlude,109,125,</INFO></NAVI>.";
 						mes "Just ask the question about it.";
 						mes "Do you need additional directions?";
 						viewpoint 1, 180, 224, 11, 0xFFFF00;
@@ -1567,7 +1567,7 @@ izlude,120,207,4	script	Information Staff#0	8W_SOLDIER,{
 					case 4:
 						mes "[Information Staff]";
 						mes "If you want to visit ^8B4513Jawaii^000000 - the resort place for a couple,";
-						mes "talk to the <NAVI>[Wedding Secretary]<INFO>izlude,180,224,</INFO></NAVI>.";
+						mes "talk to the <NAVI>[Wedding Secretary]<INFO>izlude,109,125,</INFO></NAVI>.";
 						mes "Just ask the question about it.";
 						mes "Do you need additional directions?";
 						viewpoint 1, 180, 224, 11, 0xFFFF00;
@@ -5505,7 +5505,7 @@ iz_ac02_d,101,176,5	duplicate(Kafra Guide Trainer#ac)	Kafra Guide Trainer#02_d	4
 // - Wedding Secretary
 // - Teaches the player about in-game Marriage & Adoption mechanics.
 // -----------------------------------------------------------------------------
-izlude,102,150,5	script	Wedding Secretary#iz	1_F_LIBRARYGIRL,{
+izlude,109,125,5	script	Wedding Secretary#iz	1_F_LIBRARYGIRL,{
 	if (Class == Job_Novice) {
 		mes "[Wedding Secretary]";
 		mes "You are the just a beginner.";
@@ -5608,14 +5608,14 @@ izlude,102,150,5	script	Wedding Secretary#iz	1_F_LIBRARYGIRL,{
 	}
 }
 
-izlude_a,102,150,5	duplicate(Wedding Secretary#iz)	Wedding Secretary#iz_a	1_F_LIBRARYGIRL
-izlude_b,102,150,5	duplicate(Wedding Secretary#iz)	Wedding Secretary#iz_b	1_F_LIBRARYGIRL
-izlude_c,102,150,5	duplicate(Wedding Secretary#iz)	Wedding Secretary#iz_c	1_F_LIBRARYGIRL
-izlude_d,102,150,5	duplicate(Wedding Secretary#iz)	Wedding Secretary#iz_d	1_F_LIBRARYGIRL
+izlude_a,109,125,5	duplicate(Wedding Secretary#iz)	Wedding Secretary#iz_a	1_F_LIBRARYGIRL
+izlude_b,109,125,5	duplicate(Wedding Secretary#iz)	Wedding Secretary#iz_b	1_F_LIBRARYGIRL
+izlude_c,109,125,5	duplicate(Wedding Secretary#iz)	Wedding Secretary#iz_c	1_F_LIBRARYGIRL
+izlude_d,109,125,5	duplicate(Wedding Secretary#iz)	Wedding Secretary#iz_d	1_F_LIBRARYGIRL
 
 // - Mom
 // -----------------------------------------------------------------------------
-izlude,95,146,5	script	Mom#iz	4_F_CAVE1,{
+izlude,89,183,5	script	Mom#iz	4_F_CAVE1,{
 	mes "[Mom]";
 	mes "Honey~~~";
 	next;
@@ -5674,14 +5674,14 @@ izlude,95,146,5	script	Mom#iz	4_F_CAVE1,{
 	close;
 }
 
-izlude_a,95,146,5	duplicate(Mom#iz)	Mom#iz_a	4_F_CAVE1
-izlude_b,95,146,5	duplicate(Mom#iz)	Mom#iz_b	4_F_CAVE1
-izlude_c,95,146,5	duplicate(Mom#iz)	Mom#iz_c	4_F_CAVE1
-izlude_d,95,146,5	duplicate(Mom#iz)	Mom#iz_d	4_F_CAVE1
+izlude_a,89,183,5	duplicate(Mom#iz)	Mom#iz_a	4_F_CAVE1
+izlude_b,89,183,5	duplicate(Mom#iz)	Mom#iz_b	4_F_CAVE1
+izlude_c,89,183,5	duplicate(Mom#iz)	Mom#iz_c	4_F_CAVE1
+izlude_d,89,183,5	duplicate(Mom#iz)	Mom#iz_d	4_F_CAVE1
 
 // - Dad
 // -----------------------------------------------------------------------------
-izlude,97,147,3	script	Dad#iz	1_M_JOBGUIDER,{
+izlude,91,183,3	script	Dad#iz	1_M_JOBGUIDER,{
 	mes "[Dad]";
 	mes "Got this boy ten years ago after years of childlessness.";
 	next;
@@ -5696,14 +5696,14 @@ izlude,97,147,3	script	Dad#iz	1_M_JOBGUIDER,{
 	close;
 }
 
-izlude_a,97,147,3	duplicate(Dad#iz)	Dad#iz_a	1_M_JOBGUIDER
-izlude_b,97,147,3	duplicate(Dad#iz)	Dad#iz_b	1_M_JOBGUIDER
-izlude_c,97,147,3	duplicate(Dad#iz)	Dad#iz_c	1_M_JOBGUIDER
-izlude_d,97,147,3	duplicate(Dad#iz)	Dad#iz_d	1_M_JOBGUIDER
+izlude_a,91,183,3	duplicate(Dad#iz)	Dad#iz_a	1_M_JOBGUIDER
+izlude_b,91,183,3	duplicate(Dad#iz)	Dad#iz_b	1_M_JOBGUIDER
+izlude_c,91,183,3	duplicate(Dad#iz)	Dad#iz_c	1_M_JOBGUIDER
+izlude_d,91,183,3	duplicate(Dad#iz)	Dad#iz_d	1_M_JOBGUIDER
 
 // - Etinifni
 // -----------------------------------------------------------------------------
-izlude,97,144,1	script	Etinifni#iz	4_M_DEWBOY,{
+izlude,92,181,1	script	Etinifni#iz	4_M_DEWBOY,{
 	mes "[Etinifni]";
 	mes "Once you have time, come to Orc Dungeon!";
 	close;
@@ -5720,7 +5720,7 @@ izlude_d,97,144,1	duplicate(Etinifni#iz)	Etinifni#iz_d	4_M_DEWBOY
 
 // - Romantic Male
 // -----------------------------------------------------------------------------
-izlude,99,138,3	script	Romantic Male#iz	4_M_SITDOWN,{
+izlude,112,122,3	script	Romantic Male#iz	4_M_SITDOWN,{
 	emotion ET_DELIGHT;
 	mes "[Romantic Male]";
 	mes "Let's go~~ together hand in hand~~ Put everything aside ~~ in the dark blue night of Jawaii~~ under the stars~~";
@@ -5743,14 +5743,14 @@ izlude,99,138,3	script	Romantic Male#iz	4_M_SITDOWN,{
 	close;
 }
 
-izlude_a,99,138,3	duplicate(Romantic Male#iz)	Romantic Male#iz_a	4_M_SITDOWN
-izlude_b,99,138,3	duplicate(Romantic Male#iz)	Romantic Male#iz_b	4_M_SITDOWN
-izlude_c,99,138,3	duplicate(Romantic Male#iz)	Romantic Male#iz_c	4_M_SITDOWN
-izlude_d,99,138,3	duplicate(Romantic Male#iz)	Romantic Male#iz_d	4_M_SITDOWN
+izlude_a,112,122,3	duplicate(Romantic Male#iz)	Romantic Male#iz_a	4_M_SITDOWN
+izlude_b,112,122,3	duplicate(Romantic Male#iz)	Romantic Male#iz_b	4_M_SITDOWN
+izlude_c,112,122,3	duplicate(Romantic Male#iz)	Romantic Male#iz_c	4_M_SITDOWN
+izlude_d,112,122,3	duplicate(Romantic Male#iz)	Romantic Male#iz_d	4_M_SITDOWN
 
 // - Romantic Female
 // -----------------------------------------------------------------------------
-izlude,97,138,5	script	Romantic Female#iz	4_F_SITDOWN,{
+izlude,110,122,5	script	Romantic Female#iz	4_F_SITDOWN,{
 	mes "[Romantic Female]";
 	mes "Shout like this when I miss you, honey!!";
 	next;
@@ -5786,10 +5786,10 @@ izlude,97,138,5	script	Romantic Female#iz	4_F_SITDOWN,{
 	close;
 }
 
-izlude_a,97,138,5	duplicate(Romantic Female#iz)	Romantic Female#iz_a	4_F_SITDOWN
-izlude_b,97,138,5	duplicate(Romantic Female#iz)	Romantic Female#iz_b	4_F_SITDOWN
-izlude_c,97,138,5	duplicate(Romantic Female#iz)	Romantic Female#iz_c	4_F_SITDOWN
-izlude_d,97,138,5	duplicate(Romantic Female#iz)	Romantic Female#iz_d	4_F_SITDOWN
+izlude_a,110,122,5	duplicate(Romantic Female#iz)	Romantic Female#iz_a	4_F_SITDOWN
+izlude_b,110,122,5	duplicate(Romantic Female#iz)	Romantic Female#iz_b	4_F_SITDOWN
+izlude_c,110,122,5	duplicate(Romantic Female#iz)	Romantic Female#iz_c	4_F_SITDOWN
+izlude_d,110,122,5	duplicate(Romantic Female#iz)	Romantic Female#iz_d	4_F_SITDOWN
 
 // - Manufacturing Maniac
 // -----------------------------------------------------------------------------
@@ -13919,7 +13919,7 @@ izlude_d,96,125,7	duplicate(Enchanter Mounds#iz)	Enchanter Mounds#iz_d	4_CAT_SAI
 // - Enchanter Almond J
 // - Teaches the player about enchanting.
 // -----------------------------------------------------------------------------
-izlude,108,139,7	script	Enchanter Almond J#iz	4_CAT_SAILOR3,{
+izlude,99,125,7	script	Enchanter Almond J#iz	4_CAT_SAILOR3,{
 	if (!checkweight(1301,1)) {
 		mes "- As you have too many items in your inventory, Quest can't be continued -";
 		close;
@@ -14118,10 +14118,10 @@ izlude,108,139,7	script	Enchanter Almond J#iz	4_CAT_SAILOR3,{
 	close;
 }
 
-izlude_a,108,139,7	duplicate(Enchanter Almond J#iz)	Enchanter Almond J#iz_a	4_CAT_SAILOR3
-izlude_b,108,139,7	duplicate(Enchanter Almond J#iz)	Enchanter Almond J#iz_b	4_CAT_SAILOR3
-izlude_c,108,139,7	duplicate(Enchanter Almond J#iz)	Enchanter Almond J#iz_c	4_CAT_SAILOR3
-izlude_d,108,139,7	duplicate(Enchanter Almond J#iz)	Enchanter Almond J#iz_d	4_CAT_SAILOR3
+izlude_a,99,125,7	duplicate(Enchanter Almond J#iz)	Enchanter Almond J#iz_a	4_CAT_SAILOR3
+izlude_b,99,125,7	duplicate(Enchanter Almond J#iz)	Enchanter Almond J#iz_b	4_CAT_SAILOR3
+izlude_c,99,125,7	duplicate(Enchanter Almond J#iz)	Enchanter Almond J#iz_c	4_CAT_SAILOR3
+izlude_d,99,125,7	duplicate(Enchanter Almond J#iz)	Enchanter Almond J#iz_d	4_CAT_SAILOR3
 
 // = Repair Man
 // =============================================================================
