@@ -522,7 +522,7 @@ ein_in01,38,29,0	script	Paul Spanner	63,{
 
 // Weapon/Armor Refiners
 //============================================================
-Izlude,147,137,3	script	Refinery	10276,{
+izlude,147,137,3	script	Refinery	10276,{
 	callfunc "refinemain","Hollgrehenn",0;
 	end;
 }
