@@ -20,6 +20,10 @@
 //	Balmung cannot be dropped, traded, or placed in Guild Storage (1+2+64).
 //	Only groups of group-level 50 and up can override this setting.
 
+//Custom ATIMIS
+//=============================================================
+//35001,8,100	//	Peach Point
+//=============================================================
 547,8,100	// White_Slim_Potion
 598,475,100	// Light_Red_Pot
 599,475,100	// Light_Orange_Pot
@@ -1812,9 +1816,9 @@
 13186,499,100	// TE_Woe_Shotgun
 13187,499,100	// TE_Woe_Grenade
 13208,475,100	// Gong_Bug
-13291,475,100	// Starfish
-13292,475,100	// Dried_Squid
-13293,475,100	// Flying_Fish
+//13291,475,100	// Starfish
+//13292,475,100	// Dried_Squid
+//13293,475,100	// Flying_Fish
 13295,499,100	// Light_Shuriken
 13305,499,100	// BF_Huuma_Shuriken1
 13306,499,100	// BF_Huuma_Shuriken2

@@ -3,6 +3,11 @@
 // Structure of Database:
 // ID,AegisName,Name,Type,Buy,Sell,Weight,ATK[:MATK],DEF,Range,Slots,Job,Class,Gender,Loc,wLV,eLV[:maxLevel],Refineable,View,{ Script },{ OnEquip_Script },{ OnUnequip_Script }
 //
+//Custom ATIMIS
+//=============================================================
+//35001,Peach_Point,Peach Point,2,,,,,,,,0xFFFFFFFF,63,2,,,,,View,{ Script },{},{}
+
+//=============================================================
 // Healing Items
 //=============================================================
 500,Choko_Gangjeong,Choko Gangjeong,0,0,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ percentheal 10,10; },{},{}

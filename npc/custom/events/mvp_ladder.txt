@@ -12,8 +12,8 @@
 //= 1.0 First version, edited. [Euphy]
 //============================================================
 
-prontera,164,171,3	script	MvP Ladder Warper	56,{
-	mes "[MvP Ladder Warper]";
+izlude,118,164,3	script	MvP Ladder Arena	3672,{
+	mes "[MvP Ladder Arena]";
 	mes "Say... do you want to play the MvP Ladder game?";
 	next;
 	switch(select("Yes, let's get it on!:Information.:Show me the best record.:No.")) {
@@ -222,7 +222,7 @@ OnInit:
 	set .timeout, 60;
 
 	// entrance fee (in Zeny)
-	set .register_cost, 100000;
+	set .register_cost, 1000000;
 
 	// exact amount of party members needed to start the game
 	set .register_min, 2;
@@ -301,9 +301,9 @@ OnInit:
 		mf_nosave,
 		mf_nomemo,
 		mf_noteleport,
-//		mf_nopenalty, // disable exp loss
+		mf_nopenalty, // disable exp loss
 		mf_noreturn,
-//		mf_nobranch,
+		mf_nobranch,
 //		mf_nomobloot, // disable monster drop loots,
 //		mf_nomvploot, // 2 of these
 		mf_partylock;
