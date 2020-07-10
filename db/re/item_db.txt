@@ -5,8 +5,9 @@
 //
 //Custom ATIMIS
 //=============================================================
-//35001,Peach_Point,Peach Point,2,,,,,,,,0xFFFFFFFF,63,2,,,,,View,{ Script },{},{}
-
+35001,Peach_Gem,Peach Gem,2,,,,,,,,0xFFFFFFFF,63,2,,,,,,{ dispbottom  "You got "+(countitem(35001)+1)+" Cash Point, Now you have "+#CASHPOINTS+" Cash point(s) in Total"; set #CASHPOINTS,#CASHPOINTS+(countitem(35001)+1); delitem 35001,countitem(35001);specialeffect2 590; },{},{}
+35002,Peach_Gem_Box,Peach Gem Box,2,,,,,,,,0xFFFFFFFF,63,2,,,,,,{ set #CASHPOINTS,#CASHPOINTS+10;specialeffect2 590; dispbottom  "You got 10 Cash Points, Now you have "+#CASHPOINTS+" Cash point(s) in Total"; },{},{}
+35003,Peach_Gem_Chest,Peach Gem Chest,2,,,,,,,,0xFFFFFFFF,63,2,,,,,,{ set #CASHPOINTS,#CASHPOINTS+100;specialeffect2 590; dispbottom  "You got 100 Cash Points, Now you have "+#CASHPOINTS+" Cash point(s) in Total"; },{},{}
 //=============================================================
 // Healing Items
 //=============================================================

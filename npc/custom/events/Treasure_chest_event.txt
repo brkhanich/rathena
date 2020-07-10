@@ -1,0 +1,103 @@
+//===== rAthena Script ======================================= 
+//= Find the Mushroom
+//===== By: ================================================== 
+//= Mysterious
+//===== Current Version: ===================================== 
+//= 3.6a
+//===== Compatible With: ===================================== 
+//= rAthena Project
+//===== Description: ========================================= 
+//= Find the Mushroom - random amount of Mushrooms spawns in random maps.
+//= Players need to find these mushrooms and kill them to gain prizes!
+//===== Additional Comments: =================================
+//= 3.0 Fully Functional with Rewritten script. [Mysterious]
+//= 3.6a Slightly edited. [Euphy]
+//============================================================ 
+
+izlude,130,170,6	script	Find The Treasure	10005,{
+	mes "[ Find The Treasure ]";
+	if (!.Status)
+		mes "There is no event at the moment!";
+		
+	else {
+		.@count = mobcount( .Maps$, strnpcinfo(0) + "::OnMobKilled" );
+		mes "There are " + .@count + " Treasure chests left in " + .Maps$ + "!";
+		mes "Find and open the Treasure chests to gain " + getitemname(.prize) + "!";
+	}
+	if (.Status || getgmlevel() < .GM) close;
+	mes "Start the event?";
+	next;
+	if(select("- No:- Yes") == 1) close;
+	donpcevent strnpcinfo(0)+"::OnStartEvent";
+	mes "[ Find The Treasure ]";
+	mes "Event started!";
+	close;
+
+OnInit:
+	set .Prize,35001;	// Reward item ID
+	set .GM,60;	// GM level required to access NPC
+	setarray .Maps$[0],"izlude"; // Possible maps
+	end;
+
+OnStartEvent:
+OnClock0000:
+OnClock0100:
+OnClock0200:
+OnClock0300:
+OnClock0400:
+OnClock0500:
+OnClock0600:
+OnClock0700:
+OnClock0800:
+OnClock0900:
+OnClock1000:
+OnClock1100:
+OnClock1200:
+OnClock1300:
+OnClock1400:
+OnClock1500:
+OnClock1600:
+OnClock1700:
+OnClock1800:
+OnClock1900:
+OnClock2000:
+OnClock2100:
+OnClock2200:
+OnClock2300:	
+	if (.Status) end;
+	set .Status,1;
+	set .Spawn,rand(15,25);	// How Treasure chests should spawn?
+	set .Map$,.Maps$[rand(getarraysize(.Maps$))];
+	killmonster .Map$,"All";
+
+	initnpctimer; // start timer
+
+	monster .Map$,0,0,"Seek my treasure!",1955,.Spawn,strnpcinfo(0)+"::OnMobKilled";
+	announce "Find the Treasure chests : Total of "+.Spawn+" Treasure chests have appeared in "+.Map$+"!",0;
+	sleep 2500;
+	announce "Find the Treasure chests : Every chest you open will give you "+getitemname(.Prize)+"!",0;
+	sleep 1800;
+	announce "You have 2 minutes before they disappear...",0;
+	end;
+
+// If nobody kill all mobs
+OnTimer120000: 
+	stopnpctimer;
+	if(.Spawn || .Status) {
+		killmonster .Map$,"All";
+		announce "Find the Treasure Event has ended. All the Treasure chests have disappeared.",0;
+		set .Status,0;
+	}
+	end;
+
+OnMobKilled:
+	stopnpctimer;
+	set .Spawn, .Spawn - 1;
+	getitem .Prize,rand(1,10);
+	if (.Spawn) announce "[ "+strcharinfo(0)+" ] has openned a Treasure chest. There are now "+.Spawn+" chest(s) left.",bc_map;
+	else {
+		announce "The Find the Treasure Event has ended. All the Treasure chests have been openned.",0;
+		set .Status,0;
+	}
+	end;
+}

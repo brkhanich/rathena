@@ -12,7 +12,7 @@
 //= 1.0 First version, edited. [Euphy]
 //============================================================
 
-izlude,118,164,3	script	MvP Ladder Arena	3672,{
+izlude,118,164,3	script	MvP Ladder Arena	10309,{
 	mes "[MvP Ladder Arena]";
 	mes "Say... do you want to play the MvP Ladder game?";
 	next;
@@ -216,13 +216,15 @@ OnPCDieEvent:
 OnInit:
 //	Configurations -----------------------------------------------------
 
+	waitingroom "MVP Ladder Arena",0;
+
 	// Time limit (in minutes)
 	// When time runs out, all players inside the room will be kicked out.
 	// Do NOT set this to zero!
 	set .timeout, 60;
 
 	// entrance fee (in Zeny)
-	set .register_cost, 1000000;
+	set .register_cost, 10000000;
 
 	// exact amount of party members needed to start the game
 	set .register_min, 2;
@@ -273,17 +275,17 @@ OnInit:
 	set .totalround, getarraysize(.mvpid) -1;
 
 	// item reward for completing each round
-	set .round_item_id, 512;
+	set .round_item_id, 35002;
 	set .round_item_amount, 1;
 
 	// item reward for completing the entire ladder
-	set .finish_item_id, 501;
-	set .finish_item_amount, 10;
+	set .finish_item_id, 35003;
+	set .finish_item_amount, 5;
 
 	// bonus reward if ladder completed within a certain time (in minutes)
 	set .bonus_time, 45; // if completed within 45 minutes, this reward is given
-	set .bonus_item_id, 504;
-	set .bonus_item_amount, 10;
+	set .bonus_item_id, 35003;
+	set .bonus_item_amount, 5;
 
 	// time delay between rounds, in seconds (default: 3)
 	set .delay, 5;
