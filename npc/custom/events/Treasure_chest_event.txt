@@ -40,30 +40,7 @@ OnInit:
 	end;
 
 OnStartEvent:
-OnClock0000:
-OnClock0100:
-OnClock0200:
-OnClock0300:
-OnClock0400:
-OnClock0500:
-OnClock0600:
-OnClock0700:
-OnClock0800:
-OnClock0900:
-OnClock1000:
-OnClock1100:
-OnClock1200:
-OnClock1300:
-OnClock1400:
-OnClock1500:
-OnClock1600:
-OnClock1700:
-OnClock1800:
-OnClock1900:
-OnClock2000:
-OnClock2100:
-OnClock2200:
-OnClock2300:	
+OnMinute00:	
 	if (.Status) end;
 	set .Status,1;
 	set .Spawn,rand(15,25);	// How Treasure chests should spawn?
@@ -93,6 +70,10 @@ OnTimer120000:
 OnMobKilled:
 	stopnpctimer;
 	set .Spawn, .Spawn - 1;
+	if ( rand(100) < 20 )
+		getitem 12411,rand(1,2);
+	if ( rand(100) < 20 )
+		getitem 12412,1;
 	getitem .Prize,rand(1,10);
 	if (.Spawn) announce "[ "+strcharinfo(0)+" ] has openned a Treasure chest. There are now "+.Spawn+" chest(s) left.",bc_map;
 	else {

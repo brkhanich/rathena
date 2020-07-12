@@ -8,6 +8,7 @@
 35001,Peach_Gem,Peach Gem,2,,,,,,,,0xFFFFFFFF,63,2,,,,,,{ dispbottom  "You got "+(countitem(35001)+1)+" Cash Point, Now you have "+#CASHPOINTS+" Cash point(s) in Total"; set #CASHPOINTS,#CASHPOINTS+(countitem(35001)+1); delitem 35001,countitem(35001);specialeffect2 590; },{},{}
 35002,Peach_Gem_Box,Peach Gem Box,2,,,,,,,,0xFFFFFFFF,63,2,,,,,,{ set #CASHPOINTS,#CASHPOINTS+10;specialeffect2 590; dispbottom  "You got 10 Cash Points, Now you have "+#CASHPOINTS+" Cash point(s) in Total"; },{},{}
 35003,Peach_Gem_Chest,Peach Gem Chest,2,,,,,,,,0xFFFFFFFF,63,2,,,,,,{ set #CASHPOINTS,#CASHPOINTS+100;specialeffect2 590; dispbottom  "You got 100 Cash Points, Now you have "+#CASHPOINTS+" Cash point(s) in Total"; },{},{}
+35004,Welcome_Box,Welcome Box,2,,,,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 12411,2; getitem 12412,2;getitem 12887,1; getitem 546,200; },{},{}
 //=============================================================
 // Healing Items
 //=============================================================
