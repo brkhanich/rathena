@@ -18,12 +18,48 @@
 
 
 izlude,98,141,1	script	Stylist#custom_stylist	10350,{
-	menu "ตัดผม, ย้อมสีผม, ย้อมสีเสื้อ",-,"เปลี่ยนชุด Class 3",L_Class3Suit,"แก้ ID เด้งเข้าเกมไม่ได้",L_ResetErrorCharacter;
+	menu "ตัดผม, ย้อมสีผม, ย้อมสีเสื้อ",-,"แก้ ID เด้งเข้าเกมไม่ได้",L_ResetErrorCharacter;
 	L_MainMenu:
 	setarray .@Styles[1],getbattleflag("max_cloth_color"),getbattleflag("max_hair_style"),getbattleflag("max_hair_color");
 	setarray .@Look[1],LOOK_CLOTHES_COLOR,LOOK_HAIR,LOOK_HAIR_COLOR;
 	.@s = select(" ~ สีเสื้อ: ~ ทรงผม: ~ สีผม");
 	.@Revert = getlook(.@Look[.@s]);
+	if (Class == 4218){
+		mes "Sorry, Service not avilable.";
+		end;}
+	if (Class == 4220){
+		mes "Sorry, Service not avilable.";
+		end;}
+	if (Class == 4225){
+		mes "Sorry, Service not avilable.";
+		end;}
+	if (Class == 4226){
+		mes "Sorry, Service not avilable.";
+		end;}
+	if (Class == 4227){
+		mes "Sorry, Service not avilable.";
+		end;}
+	if (Class == 4239){
+		mes "Sorry, Service not avilable.";
+		end;}
+	if (Class == 4240){
+		mes "Sorry, Service not avilable.";
+		end;}
+	if (Class == 4241){
+		mes "Sorry, Service not avilable.";
+		end;}
+	if (Class == 4242){
+		mes "Sorry, Service not avilable.";
+		end;}
+	if (Class == 4046){
+		mes "Sorry, Service not avilable.";
+		end;}
+	if (Class == 4047){
+		mes "Sorry, Service not avilable.";
+		end;}
+	if (Class == 4049){
+		mes "Sorry, Service not avilable.";
+		end;}
 	if(.@s==2)
 	.@Style = 1;
 	else
@@ -57,14 +93,7 @@ izlude,98,141,1	script	Stylist#custom_stylist	10350,{
 		}
 	}
 	
-	L_Class3Suit:
-	menu "แบบ 1",-,"แบบ 2",L_1;
-	atcommand "@bodystyle 0";
-	end;
-	
-	L_1:
-	atcommand "@bodystyle 1";
-	end;
+
 
 	L_ResetErrorCharacter:
 	mes "ID ที่เด้ง";

@@ -5,10 +5,11 @@
 //
 //Custom ATIMIS
 //=============================================================
-35001,Peach_Gem,Peach Gem,2,,,,,,,,0xFFFFFFFF,63,2,,,,,,{ dispbottom  "You got "+(countitem(35001)+1)+" Cash Point, Now you have "+#CASHPOINTS+" Cash point(s) in Total"; set #CASHPOINTS,#CASHPOINTS+(countitem(35001)+1); delitem 35001,countitem(35001);specialeffect2 590; },{},{}
+35001,Peach_Gem,Peach Gem,2,,,,,,,,0xFFFFFFFF,63,2,,,,,,{ set #CASHPOINTS,#CASHPOINTS+(countitem(35001)+1); delitem 35001,countitem(35001);specialeffect2 590; dispbottom "You got "+(countitem(35001)+1)+" Cash Point, Now you have "+#CASHPOINTS+" Cash point(s) in Total"; },{},{}
 35002,Peach_Gem_Box,Peach Gem Box,2,,,,,,,,0xFFFFFFFF,63,2,,,,,,{ set #CASHPOINTS,#CASHPOINTS+10;specialeffect2 590; dispbottom  "You got 10 Cash Points, Now you have "+#CASHPOINTS+" Cash point(s) in Total"; },{},{}
 35003,Peach_Gem_Chest,Peach Gem Chest,2,,,,,,,,0xFFFFFFFF,63,2,,,,,,{ set #CASHPOINTS,#CASHPOINTS+100;specialeffect2 590; dispbottom  "You got 100 Cash Points, Now you have "+#CASHPOINTS+" Cash point(s) in Total"; },{},{}
-35004,Welcome_Box,Welcome Box,2,,,,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 12411,2; getitem 12412,2;getitem 12887,1; getitem 546,200; },{},{}
+35004,Welcome_Box,Welcome Box,2,,,,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 12263,4; getitem 12264,2; getitem 12265,5; getitem 12887,1; getitem 546,200; },{},{}
+35005,Clothes_Box,Clothes Box,2,,,,,,,,0x000FDF80,24,2,,,,,,{ L_Class3Suit: menu "Old style",-,"New Style",L_1; atcommand "@bodystyle 0"; end; L_1: atcommand "@bodystyle 1"; end; },{},{}
 //=============================================================
 // Healing Items
 //=============================================================
@@ -6806,7 +6807,7 @@
 12477,Gift_Bundle,Gift Bundle,2,0,,0,,,,,0xFFFFFFFF,63,2,,,,,,{ /*getgroupitem(IG_Gift_Bundle);*/ getitem 547,30; getitem 608,2; getitem 6302,1; },{},{}
 12478,Chance_Box,Chance Box,2,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
 12479,Caracas_Ring_Box,Caracas Ring Box,2,0,,0,,,,,0xFFFFFFFF,63,2,,,,,,{ /*getgroupitem(IG_Caracas_Ring_Box);*/ rentitem 2841,270000; },{},{}
-12480,Attend_3Day_Box,Attend 3Day Box,2,0,,10,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
+12480,Attend_3Day_Box,Attend 3Day Box,2,0,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ },{},{}
 12481,Attend_7Day_Box,Attend 7Day Box,2,0,,10,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
 12482,Attend_10Day_Box,Attend 10Day Box,2,0,,10,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
 12483,Attend_15Day_Box,Attend 15Day Box,2,0,,10,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}

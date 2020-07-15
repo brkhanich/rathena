@@ -17,3 +17,28 @@
 //
 // Price:
 //    Item cost, in cash points (#CASHPOINTS).
+//=======0 New ===================
+0,35001,1 //Peach Gem
+0,35002,10 //Peach Box
+0,35003,100 //Peach Chest
+//=======1 Hot ===================
+
+1,6635,20 //Blacksmith_Blessing
+1,7619,10 //Enriched_Elunium
+1,12920,90 //Enriched_Elunium_Box 10
+1,7620,10 //Enriched_Oridecon
+1,12921,90 //Enriched_Oridecon_Box 10
+1,6225,20 //HD_Carnium
+1,16261,180 //HD_Carnium_Box10
+1,6226,20 //HD_Bradium
+1,16260,180 //HD_Bradium_Box10
+
+1,
+1,
+//=======6 Heal/Consumable========
+6,12411,100 //HE_Battle_Manual
+6,12412,100 //HE_Bubble_Gum
+6,12428,1 //Enrich_White_PotionZ
+6,12437,5 //Enrich_Celermine_Juice
+6,12472,50 //F_Convex_Mirror
+6,35005,500 // Clothes_Box
