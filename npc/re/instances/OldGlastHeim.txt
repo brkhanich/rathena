@@ -1660,47 +1660,47 @@ OnTimer10000:
 	case 2:
 		for ( .@i = 1; .@i <= .@random; ++.@i )
 			makeitem 719,1,"this",165,138;
-		makeitem 6608,1,"this",165,138;
+			makeitem 6608,1,"this",165,138;
 		break;
 	case 3:
 		for ( .@i = 1; .@i <= .@random; ++.@i )
 			makeitem 720,1,"this",159,138;
 		if (rand(1,4) == 4)
 			makeitem2 15066,1,"this",159,138,0,0,0,0,0,0,0;
-		makeitem 6608,1,"this",159,138;
-		makeitem 7229,1,"this",159,138;
+			makeitem 6608,1,"this",159,138;
+			makeitem 7229,1,"this",159,138;
 		break;
 	case 4:
 		for ( .@i = 1; .@i <= .@random; ++.@i )
 			makeitem 721,1,"this",153,138;
 		if (rand(1,4) == 4)
 			makeitem2 13086,1,"this",153,138,0,0,0,0,0,0,0;
-		makeitem 6608,1,"this",153,138;
-		makeitem 7230,1,"this",153,138;
+			makeitem 6608,1,"this",153,138;
+			makeitem 7230,1,"this",153,138;
 		break;
 	case 5:
 		for ( .@i = 1; .@i <= .@random; ++.@i )
 			makeitem 722,1,"this",147,138;
 		if (rand(1,4) == 4)
 			makeitem2 2949,1,"this",147,138,0,0,0,0,0,0,0;
-		makeitem 6612,1,"this",147,138;
-		makeitem 6613,1,"this",147,138;
-		makeitem 6608,1,"this",147,138;
+			makeitem 6612,1,"this",147,138;
+			makeitem 6613,1,"this",147,138;
+			makeitem 6608,1,"this",147,138;
 		break;
 	case 6:
 		for ( .@i = 1; .@i <= .@random; ++.@i )
 			makeitem 725,1,"this",141,138;
-		makeitem 7228,1,"this",141,138;
+			makeitem 7228,1,"this",141,138;
 		if (rand(1,4) == 4)
 			makeitem2 13440,1,"this",141,138,0,0,0,0,0,0,0;
-		makeitem 6608,1,"this",141,138;
+			makeitem 6608,1,"this",141,138;
 		break;
 	case 7:
 		for ( .@i = 1; .@i <= .@random; ++.@i )
 			makeitem 726,1,"this",135,138;
 		if (rand(1,4) == 4)
 			makeitem2 2022,1,"this",135,138,0,0,0,0,0,0,0;
-		makeitem 6608,1,"this",135,138;
+			makeitem 6608,1,"this",135,138;
 		break;
 	case 8:
 		for ( .@i = 1; .@i <= .@random; ++.@i )
